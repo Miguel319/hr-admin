@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR-Admin.Domain", "src\Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR-Admin.API", "src\Presentation\HR-Admin.API\HR-Admin.API.csproj", "{C9B0ED79-0B39-4F18-9825-60F03C3F6C1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR-Admin.Infrastructure.Persistence", "src\Infrastructure\HR-Admin.Infrastructure.Persistence\HR-Admin.Infrastructure.Persistence.csproj", "{885330A7-7D5C-40C9-B582-D81DBA112ABE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,7 @@ Global
 		{38B84373-A308-407C-8084-32CD4AAB59CE} = {071658D7-0AD2-43FC-8FEC-A83377ED1F30}
 		{1CFBC1E9-07FA-4CA1-A538-E35DBEFE4465} = {D22925AB-D621-42AD-8021-890EE6549D90}
 		{C9B0ED79-0B39-4F18-9825-60F03C3F6C1E} = {38B84373-A308-407C-8084-32CD4AAB59CE}
+		{885330A7-7D5C-40C9-B582-D81DBA112ABE} = {9861FFCF-EACD-4034-B190-7E9D13CB6FDF}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1CFBC1E9-07FA-4CA1-A538-E35DBEFE4465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +39,9 @@ Global
 		{C9B0ED79-0B39-4F18-9825-60F03C3F6C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9B0ED79-0B39-4F18-9825-60F03C3F6C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9B0ED79-0B39-4F18-9825-60F03C3F6C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{885330A7-7D5C-40C9-B582-D81DBA112ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885330A7-7D5C-40C9-B582-D81DBA112ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885330A7-7D5C-40C9-B582-D81DBA112ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{885330A7-7D5C-40C9-B582-D81DBA112ABE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
