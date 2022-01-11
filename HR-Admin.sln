@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{071658D7-0AD2-43FC-8FEC-A83377ED1F30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{0582E7F4-AA88-4AF6-AA54-7BBD83772D29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9861FFCF-EACD-4034-B190-7E9D13CB6FDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{D22925AB-D621-42AD-8021-890EE6549D90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{38B84373-A308-407C-8084-32CD4AAB59CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0582E7F4-AA88-4AF6-AA54-7BBD83772D29} = {071658D7-0AD2-43FC-8FEC-A83377ED1F30}
+		{9861FFCF-EACD-4034-B190-7E9D13CB6FDF} = {071658D7-0AD2-43FC-8FEC-A83377ED1F30}
+		{D22925AB-D621-42AD-8021-890EE6549D90} = {071658D7-0AD2-43FC-8FEC-A83377ED1F30}
+		{38B84373-A308-407C-8084-32CD4AAB59CE} = {071658D7-0AD2-43FC-8FEC-A83377ED1F30}
+	EndGlobalSection
+EndGlobal
