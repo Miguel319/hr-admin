@@ -1,0 +1,17 @@
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\bin\Debug\net6.0\Admin-HR.Infrastructure.Persistence.deps.json
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\bin\Debug\net6.0\Admin-HR.Infrastructure.Persistence.runtimeconfig.json
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\bin\Debug\net6.0\Admin-HR.Infrastructure.Persistence.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\bin\Debug\net6.0\ref\Admin-HR.Infrastructure.Persistence.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\bin\Debug\net6.0\Admin-HR.Infrastructure.Persistence.pdb
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\bin\Debug\net6.0\Admin-HR.Domain.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\bin\Debug\net6.0\Admin-HR.Domain.pdb
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\Admin-HR.Infrastructure.Persistence.csproj.AssemblyReference.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\Admin-HR.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\Admin-HR.Infrastructure.Persistence.AssemblyInfoInputs.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\Admin-HR.Infrastructure.Persistence.AssemblyInfo.cs
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\Admin-HR.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\Admin-HR.Infrastructure.Persistence.csproj.CopyComplete
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\Admin-HR.Infrastructure.Persistence.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\ref\Admin-HR.Infrastructure.Persistence.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\Admin-HR.Infrastructure.Persistence.pdb
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure.Persistence\obj\Debug\net6.0\Admin-HR.Infrastructure.Persistence.genruntimeconfig.cache
