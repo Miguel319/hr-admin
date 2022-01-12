@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "4m1nAtiI5aupvcgLoqvrbUUekx6CMV1gGcYCqiWsQDo=",
+  "Source": "Admin-HR.API",
+  "BasePath": "_content/Admin-HR.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
