@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Admin_HR.Domain.Entities;
 using HR_Admin.Application.Departments;
@@ -10,8 +11,11 @@ namespace Admin_HR.API.Controllers
     {
         [HttpGet]
         public async Task<ActionResult<List<Department>>> GetDepartments()
-        {
-            return await Mediator.Send(new List.Query());
-        }
+            => await Mediator.Send(new List.Query());
+
+        [HttpGet("{id:guid}")]
+        public async Task<ActionResult<Department>> GetDepartment(Guid id)
+            => await Mediator.Send(new Details.Query { Id = id});
+        
     }
 }
