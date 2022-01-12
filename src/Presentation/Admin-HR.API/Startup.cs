@@ -1,4 +1,7 @@
-﻿using Admin_HR.Infrastructure.Persistence;
+﻿using System.Collections.Generic;
+using Admin_HR.Infrastructure.Persistence;
+using HR_Admin.Application.Departments;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +28,7 @@ namespace Admin_HR.API
                 op.UseSqlite(_config.GetConnectionString(("DefaultConnection")))
             );
 
-            // services.AddMediatR(typeof(List.Handler).Assembly);
+            services.AddMediatR(typeof(List.Handler).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
