@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging; // using FP.Persistence;
+using Microsoft.Extensions.Logging; 
 
 namespace Admin_HR.API
 {
@@ -23,8 +23,6 @@ namespace Admin_HR.API
             {
                 var context = services.GetRequiredService<DataContext>();
                 await context.Database.MigrateAsync();
-                
-                // await Seed.SeedData(context);
             }
             catch (Exception exception)
             {

@@ -55,3 +55,8 @@ D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\obj\Debug\net6.0\A
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\obj\Debug\net6.0\ref\Admin-HR.API.dll
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\obj\Debug\net6.0\Admin-HR.API.pdb
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\obj\Debug\net6.0\Admin-HR.API.genruntimeconfig.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\MediatR.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\MediatR.Contracts.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\HR-Admin.Application.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\HR-Admin.Application.pdb
