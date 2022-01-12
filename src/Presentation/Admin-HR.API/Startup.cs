@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Admin_HR.Infrastructure.Persistence;
+﻿using Admin_HR.Infrastructure.Persistence;
 using HR_Admin.Application.Departments;
 using MediatR;
 using Microsoft.AspNetCore.Builder;

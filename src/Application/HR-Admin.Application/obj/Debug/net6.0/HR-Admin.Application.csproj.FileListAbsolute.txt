@@ -1,0 +1,17 @@
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\HR-Admin.Application.deps.json
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\HR-Admin.Application.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\ref\HR-Admin.Application.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\HR-Admin.Application.pdb
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\Admin-HR.Domain.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\Admin-HR.Infrastructure.Persistence.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\Admin-HR.Domain.pdb
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\Admin-HR.Infrastructure.Persistence.pdb
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.csproj.AssemblyReference.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.AssemblyInfoInputs.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.AssemblyInfo.cs
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.csproj.CoreCompileInputs.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.csproj.CopyComplete
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\ref\HR-Admin.Application.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.pdb
