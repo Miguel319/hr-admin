@@ -7,4 +7,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Domain\Admin-HR.Domain\Admin-HR.Domain.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Admin-HR.Infrastructure.Persistence\Admin-HR.Infrastructure.Persistence.csproj" />
+    </ItemGroup>
+
 </Project>
