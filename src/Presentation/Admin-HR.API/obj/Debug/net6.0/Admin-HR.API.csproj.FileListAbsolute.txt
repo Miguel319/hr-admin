@@ -60,3 +60,8 @@ D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\M
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\HR-Admin.Application.dll
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\HR-Admin.Application.pdb
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\AutoMapper.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\FluentValidation.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
