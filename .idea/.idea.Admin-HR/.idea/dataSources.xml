@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ids-fp" uuid="1c3bb4cb-aebd-43a8-816d-108637177889">
+    <data-source source="LOCAL" name="hr-dep" uuid="237c0a57-6180-4a1a-87e3-aca82ebb28df">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\ids-fp</jdbc-url>
+      <jdbc-url>jdbc:sqlite:D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\hr-dep</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
