@@ -1,14 +1,11 @@
-﻿using Admin_HR.Infrastructure.Persistence;
-using HR_Admin.Application.Core;
+﻿using Admin_HR.API.Extensions;
+using FluentValidation.AspNetCore;
 using HR_Admin.Application.Departments;
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 
 namespace Admin_HR.API
 {
@@ -21,16 +18,11 @@ namespace Admin_HR.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "WebAPIv5", Version = "v1"}); });
-
-            services.AddDbContext<DataContext>(op =>
-                op.UseSqlite(_config.GetConnectionString(("DefaultConnection")))
-            );
-
-            services.AddMediatR(typeof(List.Handler).Assembly);
-            
-            services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+            services.AddControllers().AddFluentValidation(config =>
+            {
+                config.RegisterValidatorsFromAssemblyContaining<Create>();
+            });
+            services.AddApplicationServices(_config);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

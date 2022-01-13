@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "/MCEMgav22RrmiubQ16J8PiLgIvV6v0fHW2Sup2vzhHo6cCOsaNpXld+CrEG0A3A7VVbPN+U1fm0P6PVnAq/5g==",
+  "dgSpecHash": "nTOO9URyGilyohe8uox2ZrLZm9ysNI1YXRQ7TRDvqRcmiEyhK37+gbzeptS4wD0+vydcL1qBTDXRIdXat548Dg==",
   "success": true,
   "projectFilePath": "D:\\Cool Code\\Dotnet\\HR\\Admin-HR\\src\\Application\\HR-Admin.Application\\HR-Admin.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\migue\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\migue\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\migue\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.6\\fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
+    "C:\\Users\\migue\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.6\\fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",

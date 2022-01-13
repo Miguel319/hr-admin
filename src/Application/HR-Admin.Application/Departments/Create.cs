@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Admin_HR.Domain.Entities;
 using Admin_HR.Infrastructure.Persistence;
+using FluentValidation;
 using MediatR;
 
 namespace HR_Admin.Application.Departments
@@ -12,6 +13,12 @@ namespace HR_Admin.Application.Departments
         public class Command : IRequest
         {
             public Department Department { get; set; }
+        }
+
+        public class CommandValidator : AbstractValidator<Command>
+        {
+            public CommandValidator()
+                => RuleFor(x => x.Department).SetValidator(new DepartmentValidator());
         }
 
         public class Handler : IRequestHandler<Command>

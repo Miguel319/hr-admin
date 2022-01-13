@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Admin_HR.Domain.Entities;
 using Admin_HR.Infrastructure.Persistence;
 using AutoMapper;
+using FluentValidation;
 using MediatR;
 
 namespace HR_Admin.Application.Departments
@@ -26,7 +27,12 @@ namespace HR_Admin.Application.Departments
                 _mapper = mapper;
             }
 
-
+            public class CommandValidator : AbstractValidator<Command>
+            {
+                public CommandValidator()
+                    => RuleFor(x => x.Department).SetValidator(new DepartmentValidator());
+            }
+            
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
                 var department = await _context.Departments.FindAsync(request.Department.Id);
