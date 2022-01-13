@@ -1,8 +1,10 @@
 using System;
 using System.Threading.Tasks;
+using Admin_HR.Domain.Entities;
 using Admin_HR.Infrastructure.Persistence;
 using Admin_HR.Infrastructure.Persistence.Data.Seeder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,8 +26,9 @@ namespace Admin_HR.API
             {
                 var context = services.GetRequiredService<DataContext>();
                 await context.Database.MigrateAsync();
-
-                await DbSeeder.SeedData(context);
+                
+                var userManager = services.GetRequiredService<UserManager<User>>();
+                await DbSeeder.SeedData(context, userManager);
             }
             catch (Exception exception)
             {

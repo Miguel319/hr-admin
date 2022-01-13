@@ -20,6 +20,13 @@ namespace Admin_HR.API.Extensions
                 op.UseSqlite(config.GetConnectionString(("DefaultConnection")))
             );
 
+            services.AddCors(op =>
+            {
+                op.AddPolicy("CorsPolicy", policy =>
+                    policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("*")
+                );
+            });
+
             services.AddMediatR(typeof(List.Handler).Assembly);
             
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
