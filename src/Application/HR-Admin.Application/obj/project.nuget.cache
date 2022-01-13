@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "JuwzNgQC3gvvpODCZUxKn/ZwvkosiEq++k+caQMWFpuvOLWJboWrPEt0D5Y9XgJZQGcKiXAWkRV7k0E+ElEIXA==",
+  "dgSpecHash": "/MCEMgav22RrmiubQ16J8PiLgIvV6v0fHW2Sup2vzhHo6cCOsaNpXld+CrEG0A3A7VVbPN+U1fm0P6PVnAq/5g==",
   "success": true,
   "projectFilePath": "D:\\Cool Code\\Dotnet\\HR\\Admin-HR\\src\\Application\\HR-Admin.Application\\HR-Admin.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\migue\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\migue\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
+    "C:\\Users\\migue\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.0\\microsoft.data.sqlite.core.6.0.0.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",
