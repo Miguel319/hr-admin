@@ -5,18 +5,19 @@ using Admin_HR.Domain.Entities;
 using Admin_HR.Infrastructure.Persistence;
 using AutoMapper;
 using FluentValidation;
+using HR_Admin.Application.Core;
 using MediatR;
 
 namespace HR_Admin.Application.Departments
 {
     public class Edit
     {
-        public class Command : IRequest
+        public class Command : IRequest<Result<Unit>>
         {
             public Department Department { get; set; }
         }
 
-        public class Handler : IRequestHandler<Command>
+        public class Handler : IRequestHandler<Command, Result<Unit>>
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
@@ -33,20 +34,21 @@ namespace HR_Admin.Application.Departments
                     => RuleFor(x => x.Department).SetValidator(new DepartmentValidator());
             }
             
-            public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var department = await _context.Departments.FindAsync(request.Department.Id);
 
-                if (department == null)
-                    throw new Exception("Department not Found.");
+                if (department == null) return null;
 
                 _mapper.Map(request.Department, department);
 
                 department.UpdatedAt = DateTime.Now;
 
-                await _context.SaveChangesAsync();
+                var result = await _context.SaveChangesAsync() > 0;
 
-                return Unit.Value;
+                if (!result) return Result<Unit>.Failure("Failed to update department.");
+
+                return Result<Unit>.Success(Unit.Value);
             }
         }
     }
