@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Admin_HR.Domain.Entities;
@@ -11,16 +11,15 @@ namespace Admin_HR.API.Controllers
     {
         [HttpGet]
         public async Task<ActionResult<List<Department>>> GetDepartments()
-            => await Mediator.Send(new List.Query());
+            => HandleResult(await Mediator.Send(new List.Query()));
 
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<Department>> GetDepartment(Guid id)
-            => await Mediator.Send(new Details.Query { Id = id});
-
+        => HandleResult(await Mediator.Send(new Details.Query { Id = id}));
 
         [HttpPost]
         public async Task<IActionResult> CreateDepartment(Department department)
-        => Ok(await Mediator.Send(new Create.Command {Department = department}));
+        => HandleResult(await Mediator.Send(new Create.Command {Department = department}));
 
         [HttpPut("{id}")]
         public async Task<IActionResult> EditDepartment(Guid id, Department department)
@@ -32,6 +31,6 @@ namespace Admin_HR.API.Controllers
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDepartment(Guid id)
-            => Ok(await Mediator.Send(new Delete.Command {Id = id}));
+            => HandleResult(await Mediator.Send(new Delete.Command {Id = id}));
     }
 }
