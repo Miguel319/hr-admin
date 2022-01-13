@@ -65,3 +65,4 @@ D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\A
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\FluentValidation.dll
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
