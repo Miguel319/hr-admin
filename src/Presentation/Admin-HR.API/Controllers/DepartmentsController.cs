@@ -16,6 +16,12 @@ namespace Admin_HR.API.Controllers
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<Department>> GetDepartment(Guid id)
             => await Mediator.Send(new Details.Query { Id = id});
-        
+
+
+        [HttpPost]
+        public async Task<IActionResult> CreateDepartment(Department department)
+        {
+            return Ok(await Mediator.Send(new Create.Command {Department = department}));
+        }
     }
 }

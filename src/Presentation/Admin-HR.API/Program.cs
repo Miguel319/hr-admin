@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Admin_HR.Infrastructure.Persistence;
+using Admin_HR.Infrastructure.Persistence.Data.Seeder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +24,8 @@ namespace Admin_HR.API
             {
                 var context = services.GetRequiredService<DataContext>();
                 await context.Database.MigrateAsync();
+
+                await DbSeeder.SeedData(context);
             }
             catch (Exception exception)
             {
