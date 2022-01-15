@@ -5,7 +5,9 @@ interface NavLink {
 
 export const navLinks: NavLink[] = [
   { url: "/", title: "Home" },
-  { url: "/deparments", title: "Deparments" },
+  { url: "/departments", title: "Departments" },
   { url: "/employees", title: "Employees" },
   { url: "/auth/sign-up", title: "Sign Up" },
 ];
+
+export const API_URL = String(process.env["NEXT_PUBLIC_API_URL"]);

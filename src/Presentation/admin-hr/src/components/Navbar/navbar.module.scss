@@ -1,7 +1,7 @@
 .navbar {
   background-color: #000;
   position: relative;
-  padding: 10px 5px;
+  padding: 19px 5px;
   align-items: center;
   height: 4.5rem;
 }
@@ -15,8 +15,13 @@
   margin: 0 auto;
 }
 
+.active-link {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.774) !important; 
+}
+
 .effect {
-  color: hsla(120, 100%, 50%, 0.863);
+  color: hsla(202, 95%, 63%, 0.863);
 }
 
 .logo {
@@ -59,9 +64,9 @@
 
   .navbar-container {
     align-items: center;
-    padding: 13px 5px;
+    padding: 0px 5px;
   }
-  
+
   .navbar-items {
     flex-direction: column;
     width: 100%;

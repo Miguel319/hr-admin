@@ -1,19 +1,23 @@
 import { FC, useState } from "react";
 import { navLinks } from "../../utils/constants";
-import styles from "./navbar.module.css";
+import styles from "./navbar.module.scss";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 
 const Navbar: FC = (): JSX.Element => {
   const [clicked, setClicked] = useState<boolean>(false);
   const router: NextRouter = useRouter();
+
+  console.log(router.pathname, router.asPath);
 
   const toggleClick = (): void => setClicked(!clicked);
 
   const Links: JSX.Element[] = navLinks.map(({ title, url }, idx) => (
     <li key={idx} onClick={() => (clicked ? toggleClick() : null)}>
       <Link href={url}>
-        <a>{title}</a>
+        <a className={router.asPath === url ? styles["active-link"] : ""}>
+          {title}
+        </a>
       </Link>
     </li>
   ));
