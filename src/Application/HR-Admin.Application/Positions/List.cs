@@ -7,26 +7,25 @@ using HR_Admin.Application.Core;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace HR_Admin.Application.Departments
+namespace HR_Admin.Application.Positions
 {
     public class List
     {
-        public class Query : IRequest<Result<List<Department>>>
+        public class Query : IRequest<Result<List<Position>>>
         {
-            
         }
 
-        public class Handler : IRequestHandler<Query, Result<List<Department>>>
+        public class Handler : IRequestHandler<Query, Result<List<Position>>>
         {
             private readonly DataContext _context;
 
             public Handler(DataContext context) => _context = context;
 
-            public async Task<Result<List<Department>>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<Result<List<Position>>> Handle(Query request, CancellationToken cancellationToken)
             {
-                var departments = await _context.Departments.ToListAsync(cancellationToken);
+                var positions = await _context.Positions.ToListAsync(cancellationToken);
 
-                return Result<List<Department>>.Success(departments);
+                return Result<List<Position>>.Success(positions);
             }
         }
     }
