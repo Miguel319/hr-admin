@@ -8,6 +8,7 @@ namespace HR_Admin.Application.Core
         public MappingProfiles()
         {
             CreateMap<Department, Department>();
+            CreateMap<Position, Position>();
         }
     }
 }

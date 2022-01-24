@@ -21,15 +21,15 @@ namespace Admin_HR.API.Controllers
         public async Task<IActionResult> CreateDepartment(Department department)
         => HandleResult(await Mediator.Send(new Create.Command {Department = department}));
 
-        [HttpPut("{id}")]
+        [HttpPut("{id:guid}")]
         public async Task<IActionResult> EditDepartment(Guid id, Department department)
         {
             department.Id = id;
 
-            return Ok(await Mediator.Send(new Edit.Command {Department = department}));
+            return HandleResult(await Mediator.Send(new Edit.Command {Department = department}));
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteDepartment(Guid id)
             => HandleResult(await Mediator.Send(new Delete.Command {Id = id}));
     }
