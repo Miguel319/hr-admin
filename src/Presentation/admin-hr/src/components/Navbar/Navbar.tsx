@@ -8,8 +8,6 @@ const Navbar: FC = (): JSX.Element => {
   const [clicked, setClicked] = useState<boolean>(false);
   const router: NextRouter = useRouter();
 
-  console.log(router.pathname, router.asPath);
-
   const toggleClick = (): void => setClicked(!clicked);
 
   const Links: JSX.Element[] = navLinks.map(({ title, url }, idx) => (

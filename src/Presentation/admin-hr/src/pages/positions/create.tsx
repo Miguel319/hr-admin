@@ -1,8 +1,8 @@
 import { NextRouter, useRouter } from "next/router";
 import { FC, useEffect, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
-import { DepartmentRequest } from "../../api/requests/department.request";
-import { IDepartment, NewDepartment } from "../../models/department.model";
+import { PositionRequest } from "../../api/requests/position.request";
+import { IPosition, INewPosition } from "../../models/position.model";
 import styles from "../../styles/form.module.scss";
 import { handleError } from "../../utils/error-handler";
 
@@ -16,7 +16,7 @@ const create: FC = (): JSX.Element => {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm<NewDepartment>({
+  } = useForm<INewPosition>({
     mode: "onBlur",
   });
 
@@ -25,25 +25,30 @@ const create: FC = (): JSX.Element => {
     name: "name",
   });
 
-  const code = useWatch({
+  const minSalary = useWatch({
     control,
-    name: "code",
+    name: "minSalary",
+  });
+
+  const maxSalary = useWatch({
+    control,
+    name: "maxSalary",
   });
 
   useEffect(() => {
     setError(null);
-  }, [name, code]);
+  }, [name, minSalary, maxSalary]);
 
-  const onSubmit = handleSubmit(async (department): Promise<void> => {
+  const onSubmit = handleSubmit(async (position): Promise<void> => {
     const { notification } = await import("../../utils/notifications");
     try {
       setIsPending(true);
 
-      await DepartmentRequest.create(department as IDepartment);
+      await PositionRequest.create(position as IPosition);
 
-      notification.success("Department created successfully");
+      notification.success("Position created successfully");
 
-      setTimeout(() => router.push("/departments"), 800);
+      setTimeout(() => router.push("/positions"), 800);
     } catch (error) {
       setError(handleError(error));
     } finally {
@@ -53,7 +58,7 @@ const create: FC = (): JSX.Element => {
 
   return (
     <div className={`${styles[""]}`}>
-      <h2>Create Department</h2>
+      <h2>Create Position</h2>
 
       <form onSubmit={onSubmit} className={`${styles["form"]} mt-3`}>
         <div className={`${styles["form-group"]}`}>
@@ -64,7 +69,7 @@ const create: FC = (): JSX.Element => {
               required: "The name is mandatory.",
             })}
             name="name"
-            placeholder="Department"
+            placeholder="Position"
           />
           {errors.name ? (
             <span className="error-msg">{errors.name.message}</span>
@@ -72,19 +77,35 @@ const create: FC = (): JSX.Element => {
         </div>
 
         <div className={`${styles["form-group"]}`}>
-          <label htmlFor="code">Code</label>
+          <label htmlFor="minSalary">Min Salary</label>
           <input
-            type="text"
-            name="code"
-            {...register("code", {
-              required: "The code is mandatory.",
+            type="number"
+            name="minSalary"
+            {...register("minSalary", {
+              required: "The min salary is mandatory.",
             })}
-            placeholder="AB2-42"
+            placeholder="2000"
           />
-          {errors.code ? (
-            <span className="error-msg">{errors.code.message}</span>
+          {errors.minSalary ? (
+            <span className="error-msg">{errors.minSalary.message}</span>
           ) : null}
         </div>
+
+        <div className={`${styles["form-group"]}`}>
+          <label htmlFor="code">Max Salary</label>
+          <input
+            type="number"
+            name="maxSalary"
+            {...register("maxSalary", {
+              required: "The max salary is mandatory.",
+            })}
+            placeholder="5000"
+          />
+          {errors.maxSalary ? (
+            <span className="error-msg">{errors.maxSalary.message}</span>
+          ) : null}
+        </div>
+
         {error ? <p className="error-msg">{error}</p> : null}
 
         <button>
@@ -96,7 +117,7 @@ const create: FC = (): JSX.Element => {
               <span>Loading...</span>
             </>
           ) : null}
-          Create Department
+          Create Position
         </button>
       </form>
     </div>

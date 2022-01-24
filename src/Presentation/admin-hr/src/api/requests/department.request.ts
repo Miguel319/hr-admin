@@ -1,4 +1,4 @@
-import { IDepartment } from "../../models/derpartment.model";
+import { IDepartment } from "../../models/department.model";
 import http from "../http";
 
 export class DepartmentRequest {
