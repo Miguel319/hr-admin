@@ -1,16 +1,16 @@
 import { NextRouter, useRouter } from "next/router";
 import { FC, useState } from "react";
-import { DepartmentRequest } from "../../api/requests/department.request";
+import { PositionRequest } from "../../api/requests/position.request";
 import Table from "../../components/Table/Table";
-import { IDepartment } from "../../models/department.model";
+import { IPosition } from "../../models/position.model";
 import { DateFormatter } from "../../utils/date-formatter";
 import { handleError } from "../../utils/error-handler";
 
 interface DerpartmentsProps {
-  departments: Array<IDepartment>;
+  positions: Array<IPosition>;
 }
 
-const Departments: FC<DerpartmentsProps> = ({ departments }): JSX.Element => {
+const Positions: FC<DerpartmentsProps> = ({ positions }): JSX.Element => {
   const router: NextRouter = useRouter();
 
   const onDelete = async (id: string) => {
@@ -19,14 +19,14 @@ const Departments: FC<DerpartmentsProps> = ({ departments }): JSX.Element => {
     const { notification } = await import("../../utils/notifications");
 
     alertify.confirm(
-      "Are you sure you want to delete this department?",
+      "Are you sure you want to delete this position?",
       async () => {
         try {
-          await DepartmentRequest.delete(id);
+          await PositionRequest.delete(id);
 
           router.replace(router.asPath);
 
-          notification.success("Department deleted successfully!");
+          notification.success("Position deleted successfully!");
         } catch (error) {
           notification.error(handleError(error));
         }
@@ -37,11 +37,11 @@ const Departments: FC<DerpartmentsProps> = ({ departments }): JSX.Element => {
   return (
     <div>
       <div className="flex j-between">
-        <h2>Departments</h2>
+        <h2>Positions</h2>
 
         <button
           className="outline-btn"
-          onClick={() => router.push("/departments/create")}
+          onClick={() => router.push("/positions/create")}
         >
           <i className=" fas fa-plus-circle mr-1"></i>
           Add
@@ -51,21 +51,21 @@ const Departments: FC<DerpartmentsProps> = ({ departments }): JSX.Element => {
       <div className="mt-3">
         <Table
           onDelete={onDelete}
-          entity="department"
-          onUpdate={(id: string) => router.push(`/departments/${id}`)}
+          onUpdate={(id: string) => router.push(`/positions/${id}`)}
+          entity="position"
           headingColumns={[
             "Name",
-            "Code",
+            "Min salary",
+            "Max salary",
             "Created At",
-            "Updated At",
             "Actions",
           ]}
-          tableData={departments.map((v) => ({
+          tableData={positions.map((v) => ({
             id: v.id,
             name: v.name,
-            code: v.code,
+            minSalary: v.minSalary,
+            maxSalary: v.maxSalary,
             createdAt: DateFormatter.timeSince(v.createdAt as Date),
-            updatedAt: DateFormatter.timeSince(v.updatedAt as Date),
           }))}
         ></Table>
       </div>
@@ -74,13 +74,13 @@ const Departments: FC<DerpartmentsProps> = ({ departments }): JSX.Element => {
 };
 
 export async function getStaticProps() {
-  const { data } = await DepartmentRequest.findAll();
+  const { data } = await PositionRequest.findAll();
 
   return {
     props: {
-      departments: data,
+      positions: data,
     },
   };
 }
 
-export default Departments;
+export default Positions;

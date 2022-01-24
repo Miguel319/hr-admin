@@ -4,8 +4,8 @@ interface NavLink {
 }
 
 export const navLinks: NavLink[] = [
-  { url: "/", title: "Home" },
   { url: "/departments", title: "Departments" },
+  { url: "/positions", title: "Positions" },
   { url: "/employees", title: "Employees" },
   { url: "/auth/sign-up", title: "Sign Up" },
 ];

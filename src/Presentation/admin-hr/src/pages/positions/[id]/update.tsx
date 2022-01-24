@@ -1,8 +1,8 @@
 import { NextRouter, useRouter } from "next/router";
 import { FC, useEffect, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
-import { DepartmentRequest } from "../../../api/requests/department.request";
-import { IDepartment, NewDepartment } from "../../../models/department.model";
+import { PositionRequest } from "../../../api/requests/position.request";
+import { IPosition, INewPosition } from "../../../models/position.model";
 import styles from "../../../styles/form.module.scss";
 import { handleError } from "../../../utils/error-handler";
 
@@ -11,16 +11,16 @@ const Update: FC = (): JSX.Element => {
   const [error, setError] = useState<any>();
   const [isPending, setIsPending] = useState<boolean>(false);
   const { id } = router.query;
-  const [department, setDepartment] = useState<IDepartment | null>(null);
+  const [position, setPosition] = useState<IPosition | null>(null);
 
   useEffect(() => {
-    const fetchDepartment = async () => {
-      const { data } = await DepartmentRequest.findById(id as string);
+    const fetchPosition = async () => {
+      const { data } = await PositionRequest.findById(id as string);
 
-      setDepartment(data);
+      setPosition(data);
     };
 
-    fetchDepartment();
+    fetchPosition();
   }, []);
 
   const {
@@ -28,7 +28,7 @@ const Update: FC = (): JSX.Element => {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm<NewDepartment>({
+  } = useForm<INewPosition>({
     mode: "onBlur",
   });
 
@@ -37,14 +37,19 @@ const Update: FC = (): JSX.Element => {
     name: "name",
   });
 
-  const code = useWatch({
+  const minSalary = useWatch({
     control,
-    name: "code",
+    name: "minSalary",
+  });
+
+  const maxSalary = useWatch({
+    control,
+    name: "maxSalary",
   });
 
   useEffect(() => {
     setError(null);
-  }, [name, code]);
+  }, [name, minSalary, maxSalary]);
 
   const onSubmit = handleSubmit(async (data) => {
     const { notification } = await import("../../../utils/notifications");
@@ -52,11 +57,11 @@ const Update: FC = (): JSX.Element => {
     try {
       setIsPending(true);
 
-      await DepartmentRequest.update(id as string, data as IDepartment);
+      await PositionRequest.update(id as string, data as IPosition);
 
-      notification.success("Department updated successfully!");
+      notification.success("Position updated successfully!");
 
-      setTimeout(() => router.push("/departments"), 500);
+      setTimeout(() => router.push("/positions"), 500);
     } catch (error) {
       setError(handleError(error));
     } finally {
@@ -66,10 +71,10 @@ const Update: FC = (): JSX.Element => {
 
   return (
     <div className={`${styles[""]}`}>
-      <h2>Update Department</h2>
+      <h2>Update Position</h2>
 
       <form onSubmit={onSubmit} className={`${styles["form"]} mt-3`}>
-        {department ? (
+        {position ? (
           <>
             <div className={`${styles["form-group"]}`}>
               <label htmlFor="name">Name</label>
@@ -79,8 +84,8 @@ const Update: FC = (): JSX.Element => {
                   required: "The name is mandatory.",
                 })}
                 name="name"
-                defaultValue={department.name}
-                placeholder="Department"
+                defaultValue={position.name}
+                placeholder="Position"
               />
               {errors.name ? (
                 <span className="error-msg">{errors.name.message}</span>
@@ -88,18 +93,34 @@ const Update: FC = (): JSX.Element => {
             </div>
 
             <div className={`${styles["form-group"]}`}>
-              <label htmlFor="code">Code</label>
+              <label htmlFor="minSalary">Min Salary</label>
               <input
-                type="text"
-                defaultValue={department.code}
-                name="code"
-                {...register("code", {
+                type="number"
+                defaultValue={position.minSalary}
+                name="minSalary"
+                {...register("minSalary", {
                   required: "The code is mandatory.",
                 })}
-                placeholder="AB2-42"
+                placeholder="2000"
               />
-              {errors.code ? (
-                <span className="error-msg">{errors.code.message}</span>
+              {errors.minSalary ? (
+                <span className="error-msg">{errors.minSalary.message}</span>
+              ) : null}
+            </div>
+
+            <div className={`${styles["form-group"]}`}>
+              <label htmlFor="minSalary">Max Salary</label>
+              <input
+                type="number"
+                defaultValue={position.maxSalary}
+                name="code"
+                {...register("maxSalary", {
+                  required: "The max salary is mandatory.",
+                })}
+                placeholder="5000"
+              />
+              {errors.minSalary ? (
+                <span className="error-msg">{errors.minSalary.message}</span>
               ) : null}
             </div>
             {error ? <p className="error-msg">{error}</p> : null}
@@ -113,7 +134,7 @@ const Update: FC = (): JSX.Element => {
                   <span>Loading...</span>
                 </>
               ) : null}
-              Update Department
+              Update Position
             </button>
           </>
         ) : null}

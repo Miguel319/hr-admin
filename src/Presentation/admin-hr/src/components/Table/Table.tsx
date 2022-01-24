@@ -3,6 +3,7 @@ import styles from "./table.module.scss";
 
 interface TableProps {
   tableData: any[];
+  entity: "employee" | "department" | "position";
   headingColumns: string[];
   onDelete: (id: string) => Promise<void>;
   onUpdate: (id: string) => void;
@@ -17,8 +18,27 @@ const Table: FC<TableProps> = ({
   headingColumns,
   tableData,
   onDelete,
+  entity,
   onUpdate,
 }): JSX.Element => {
+  const renderActions = (index: number, data: any, row: any) => (
+    <>
+      <td key={index} data-heading={data.key}>
+        {data.val}
+      </td>
+      <td className="actions">
+        <i
+          className={`fas fa-edit mr-2 ${styles["edit-btn"]}`}
+          onClick={() => onUpdate(`${row.id}/update`)}
+        />
+        <i
+          className={`far fa-trash-alt ${styles["delete-btn"]}`}
+          onClick={() => onDelete(row.id)}
+        ></i>
+      </td>
+    </>
+  );
+
   const renderData = () => {
     const data =
       tableData &&
@@ -33,28 +53,14 @@ const Table: FC<TableProps> = ({
             val: data[1] as number,
           });
         });
-        console.log(row);
 
         return (
           <tr key={index}>
             {rowData.map((data, index) => (
               <>
-                {index === 3 ? (
-                  <>
-                    <td key={index} data-heading={data.key}>
-                      {data.val}
-                    </td>
-                    <td className="actions">
-                      <i
-                        className={`fas fa-edit mr-2 ${styles["edit-btn"]}`}
-                        onClick={() => onUpdate(`${row.id}/update`)}
-                      />
-                      <i
-                        className={`far fa-trash-alt ${styles["delete-btn"]}`}
-                        onClick={() => onDelete(row.id)}
-                      ></i>
-                    </td>
-                  </>
+                {(entity === "department" && index === 3) ||
+                (entity === "position" && index === 3) ? (
+                  renderActions(index, data, row)
                 ) : (
                   <td key={index} data-title={data.key}>
                     {data.val}

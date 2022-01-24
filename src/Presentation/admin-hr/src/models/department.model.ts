@@ -1,9 +1,8 @@
-export interface IDepartment {
-  id: string;
+import { IBaseModel } from "./base.model";
+
+export interface IDepartment extends IBaseModel {
   name: string;
   code: string;
-  createdAt: Date | string;
-  updatedAt: Date | string;
 }
 
 export interface NewDepartment {
