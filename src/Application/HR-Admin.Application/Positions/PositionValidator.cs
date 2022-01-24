@@ -7,7 +7,7 @@ namespace HR_Admin.Application.Positions
     {
         public PositionValidator()
         {
-            RuleFor(x => x.Name).NotEmpty();
+            RuleFor(x => x.Name).NotEmpty().WithMessage("The name is mandatory.");
             RuleFor(x => x.MinSalary).NotEmpty().WithMessage("The min salary is mandatory.");
             RuleFor(x => x.MaxSalary).NotEmpty().WithMessage("The max salary is mandatory.");
             
