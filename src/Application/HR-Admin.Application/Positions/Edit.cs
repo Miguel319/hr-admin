@@ -8,13 +8,13 @@ using FluentValidation;
 using HR_Admin.Application.Core;
 using MediatR;
 
-namespace HR_Admin.Application.Departments
+namespace HR_Admin.Application.Positions
 {
     public class Edit
     {
         public class Command : IRequest<Result<Unit>>
         {
-            public Department Department { get; set; }
+            public Position Position { get; set; }
         }
 
         public class Handler : IRequestHandler<Command, Result<Unit>>
@@ -31,22 +31,24 @@ namespace HR_Admin.Application.Departments
             public class CommandValidator : AbstractValidator<Command>
             {
                 public CommandValidator()
-                    => RuleFor(x => x.Department).SetValidator(new DepartmentValidator());
+                    => RuleFor(x => x.Position).SetValidator(new PositionValidator());
             }
-            
+
+
             public async Task<Result<Unit>?> Handle(Command request, CancellationToken cancellationToken)
             {
-                var department = await _context.Departments.FindAsync(new object?[] { request.Department.Id }, cancellationToken: cancellationToken);
+                var position =
+                    await _context.Positions.FindAsync(new object?[] {request.Position.Id}, cancellationToken);
 
-                if (department == null) return null;
+                if (position == null) return null;
 
-                _mapper.Map(request.Department, department);
+                _mapper.Map(request.Position, position);
 
-                department.UpdatedAt = DateTime.Now;
+                position.UpdatedAt = DateTime.Now;
 
                 var result = await _context.SaveChangesAsync(cancellationToken) > 0;
 
-                return !result ? Result<Unit>.Failure("Failed to update department.") : Result<Unit>.Success(Unit.Value);
+                return !result ? Result<Unit>.Failure("Failed to update position.") : Result<Unit>.Success(Unit.Value);
             }
         }
     }

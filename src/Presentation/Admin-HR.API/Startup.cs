@@ -22,6 +22,7 @@ namespace Admin_HR.API
             services.AddControllers().AddFluentValidation(config =>
                 config.RegisterValidatorsFromAssemblyContaining<Create>()
             );
+            
             services.AddApplicationServices(_config);
             services.AddIdentityServices(_config);
         }
