@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR-Admin.Application", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin-HR.Domain", "src\Domain\Admin-HR.Domain\Admin-HR.Domain.csproj", "{5C2B5198-742E-4DEA-9CDF-BD4622B42C4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin-HR.Infrastructure", "src\Infrastructure\Admin-HR.Infrastructure\Admin-HR.Infrastructure.csproj", "{1546F834-3D2A-44BE-AD4E-D6610281303E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,7 @@ Global
 		{A2900B86-7742-4595-AF4C-0CBBC16BB643} = {6201FA41-5055-4EC3-986E-D59E2CFC2015}
 		{60A1F9FA-DC50-4BDC-9EA2-C2C14383D76C} = {05249FB1-2E88-4DC1-B992-F86D83E508C0}
 		{5C2B5198-742E-4DEA-9CDF-BD4622B42C4E} = {77AA02D9-0065-4075-B4B0-676F5CB2837D}
+		{1546F834-3D2A-44BE-AD4E-D6610281303E} = {6201FA41-5055-4EC3-986E-D59E2CFC2015}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A477316C-3A69-47E1-85C7-FA5F549B7709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -50,5 +53,9 @@ Global
 		{5C2B5198-742E-4DEA-9CDF-BD4622B42C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C2B5198-742E-4DEA-9CDF-BD4622B42C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C2B5198-742E-4DEA-9CDF-BD4622B42C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1546F834-3D2A-44BE-AD4E-D6610281303E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1546F834-3D2A-44BE-AD4E-D6610281303E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1546F834-3D2A-44BE-AD4E-D6610281303E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1546F834-3D2A-44BE-AD4E-D6610281303E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

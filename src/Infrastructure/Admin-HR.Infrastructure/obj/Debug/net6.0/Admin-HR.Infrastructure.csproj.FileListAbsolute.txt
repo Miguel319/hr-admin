@@ -1,0 +1,12 @@
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\bin\Debug\net6.0\Admin-HR.Infrastructure.deps.json
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\bin\Debug\net6.0\Admin-HR.Infrastructure.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\bin\Debug\net6.0\ref\Admin-HR.Infrastructure.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\bin\Debug\net6.0\Admin-HR.Infrastructure.pdb
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\obj\Debug\net6.0\Admin-HR.Infrastructure.csproj.AssemblyReference.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\obj\Debug\net6.0\Admin-HR.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\obj\Debug\net6.0\Admin-HR.Infrastructure.AssemblyInfoInputs.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\obj\Debug\net6.0\Admin-HR.Infrastructure.AssemblyInfo.cs
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\obj\Debug\net6.0\Admin-HR.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\obj\Debug\net6.0\Admin-HR.Infrastructure.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\obj\Debug\net6.0\ref\Admin-HR.Infrastructure.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Infrastructure\Admin-HR.Infrastructure\obj\Debug\net6.0\Admin-HR.Infrastructure.pdb

@@ -9,6 +9,7 @@
       "HR-Admin.Application/1.0.0": {
         "dependencies": {
           "Admin-HR.Domain": "1.0.0",
+          "Admin-HR.Infrastructure": "1.0.0",
           "Admin-HR.Infrastructure.Persistence": "1.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "FluentValidation.AspNetCore": "10.3.6",
@@ -414,6 +415,11 @@
           "Admin-HR.Domain.dll": {}
         }
       },
+      "Admin-HR.Infrastructure/1.0.0": {
+        "runtime": {
+          "Admin-HR.Infrastructure.dll": {}
+        }
+      },
       "Admin-HR.Infrastructure.Persistence/1.0.0": {
         "dependencies": {
           "Admin-HR.Domain": "1.0.0",
@@ -726,6 +732,11 @@
       "hashPath": "system.text.json.6.0.0.nupkg.sha512"
     },
     "Admin-HR.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Admin-HR.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
