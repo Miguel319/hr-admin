@@ -11,6 +11,7 @@ namespace HR_Admin.Application.Core
             CreateMap<Department, Department>();
             CreateMap<Position, Position>();
             CreateMap<Employee, EmployeeDto>();
+            CreateMap<Employee, Employee>();
         }
     }
 }

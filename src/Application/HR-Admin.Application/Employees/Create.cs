@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Admin_HR.Domain.Entities;
 using Admin_HR.Infrastructure.Persistence;
+using FluentValidation;
 using HR_Admin.Application.Core;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -16,11 +17,11 @@ namespace HR_Admin.Application.Employees
             public Employee Employee { get; set; }
         }
 
-        // public class CommandValidator : AbstractValidator<Command>
-        // {
-        // public CommandValidator()
-        // => RuleFor(x => x.Employee).SetValidator(new EmployeeValidator());
-        // }
+        public class CommandValidator : AbstractValidator<Command>
+        {
+            public CommandValidator()
+                => RuleFor(x => x.Employee).SetValidator(new EmployeeValidator());
+        }
 
         public class Handler : IRequestHandler<Command, Result<Unit>>
         {
@@ -31,8 +32,6 @@ namespace HR_Admin.Application.Employees
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-
-
                 var department = await _context.Departments.FirstOrDefaultAsync(
                     x => x.Id == request.Employee.Department.Id,
                     cancellationToken);
@@ -45,6 +44,7 @@ namespace HR_Admin.Application.Employees
                 if (position == null) return null;
 
                 request.Employee.CreatedAt = DateTime.Now;
+                request.Employee.HireDate = DateTime.Now;
                 request.Employee.UpdatedAt = DateTime.Now;
                 request.Employee.Department = department;
                 request.Employee.Position = position;
