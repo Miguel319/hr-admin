@@ -4,9 +4,9 @@ using Admin_HR.Domain.Entities;
 
 namespace Admin_HR.Infrastructure.Persistence.Data
 {
-    class DepartmentData
+    internal static class DepartmentData
     {
-        public static List<Department> GetDepartments()
+        public static IEnumerable<Department> GetDepartments()
             => new List<Department>()
             {
                 new()

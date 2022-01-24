@@ -1,33 +1,50 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Admin_HR.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 
 namespace Admin_HR.Infrastructure.Persistence.Data.Seeder
 {
-    public class DbSeeder
+    public static class DbSeeder
     {
-        public static async Task SeedData(DataContext context, UserManager<User> userManager)
+        private static async Task SeedDepartments(DataContext context)
+        {
+            if (!context.Departments.Any())
+            {
+                var departmentData = DepartmentData.GetDepartments();
+
+                await context.Departments.AddRangeAsync(departmentData);
+                await context.SaveChangesAsync();
+            }
+        }
+
+        private static async Task SeedPositions(DataContext context)
+        {
+            if (!context.Positions.Any())
+            {
+                var positionsData = PositionData.GetPositions();
+
+                await context.Positions.AddRangeAsync(positionsData);
+                await context.SaveChangesAsync();
+            }
+        }
+
+        private static async Task SeedUsers(UserManager<User> userManager)
         {
             if (!userManager.Users.Any())
             {
-                Console.WriteLine("text");
-
                 foreach (var user in UserData.GetUserData())
-                {
-                    Console.WriteLine("User created");
-                    
                     await userManager.CreateAsync(user, "P4ssw0rd!");
-                }
             }
+        }
 
-            if (context.Departments.Any()) return;
+        public static async Task SeedData(DataContext context, UserManager<User> userManager)
+        {
+            await SeedUsers(userManager);
 
-            var departmentData = DepartmentData.GetDepartments();
-
-            await context.Departments.AddRangeAsync(departmentData);
-            await context.SaveChangesAsync();
+            await SeedPositions(context);
+            
+            await SeedDepartments(context);
         }
     }
 }

@@ -9,5 +9,6 @@ namespace Admin_HR.Infrastructure.Persistence
         public DataContext(DbContextOptions options) : base(options) {}
 
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Position> Positions { get; set; }
     }
 }
