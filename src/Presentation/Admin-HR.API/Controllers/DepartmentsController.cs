@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Admin_HR.Domain.Entities;
@@ -15,11 +15,11 @@ namespace Admin_HR.API.Controllers
 
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<Department>> GetDepartment(Guid id)
-        => HandleResult(await Mediator.Send(new Details.Query { Id = id}));
+            => HandleResult(await Mediator.Send(new Details.Query {Id = id}));
 
         [HttpPost]
         public async Task<IActionResult> CreateDepartment(Department department)
-        => HandleResult(await Mediator.Send(new Create.Command {Department = department}));
+            => HandleResult(await Mediator.Send(new Create.Command {Department = department}));
 
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> EditDepartment(Guid id, Department department)
