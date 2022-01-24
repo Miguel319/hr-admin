@@ -713,6 +713,16 @@
           "bin/placeholder/Admin-HR.Domain.dll": {}
         }
       },
+      "Admin-HR.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Admin-HR.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Admin-HR.Infrastructure.dll": {}
+        }
+      },
       "Admin-HR.Infrastructure.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -732,6 +742,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Admin-HR.Domain": "1.0.0",
+          "Admin-HR.Infrastructure": "1.0.0",
           "Admin-HR.Infrastructure.Persistence": "1.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "FluentValidation.AspNetCore": "10.3.6",
@@ -1824,6 +1835,11 @@
       "path": "../../Domain/Admin-HR.Domain/Admin-HR.Domain.csproj",
       "msbuildProject": "../../Domain/Admin-HR.Domain/Admin-HR.Domain.csproj"
     },
+    "Admin-HR.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../Infrastructure/Admin-HR.Infrastructure/Admin-HR.Infrastructure.csproj",
+      "msbuildProject": "../../Infrastructure/Admin-HR.Infrastructure/Admin-HR.Infrastructure.csproj"
+    },
     "Admin-HR.Infrastructure.Persistence/1.0.0": {
       "type": "project",
       "path": "../../Infrastructure/Admin-HR.Infrastructure.Persistence/Admin-HR.Infrastructure.Persistence.csproj",
@@ -1837,6 +1853,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Admin-HR.Infrastructure >= 1.0.0",
       "Admin-HR.Infrastructure.Persistence >= 1.0.0",
       "HR-Admin.Application >= 1.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.1",
@@ -1876,6 +1893,9 @@
             },
             "D:\\Cool Code\\Dotnet\\HR\\Admin-HR\\src\\Infrastructure\\Admin-HR.Infrastructure.Persistence\\Admin-HR.Infrastructure.Persistence.csproj": {
               "projectPath": "D:\\Cool Code\\Dotnet\\HR\\Admin-HR\\src\\Infrastructure\\Admin-HR.Infrastructure.Persistence\\Admin-HR.Infrastructure.Persistence.csproj"
+            },
+            "D:\\Cool Code\\Dotnet\\HR\\Admin-HR\\src\\Infrastructure\\Admin-HR.Infrastructure\\Admin-HR.Infrastructure.csproj": {
+              "projectPath": "D:\\Cool Code\\Dotnet\\HR\\Admin-HR\\src\\Infrastructure\\Admin-HR.Infrastructure\\Admin-HR.Infrastructure.csproj"
             }
           }
         }

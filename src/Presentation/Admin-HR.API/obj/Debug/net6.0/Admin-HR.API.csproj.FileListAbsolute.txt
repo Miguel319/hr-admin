@@ -66,3 +66,5 @@ D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\F
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\Admin-HR.Infrastructure.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Presentation\Admin-HR.API\bin\Debug\net6.0\Admin-HR.Infrastructure.pdb

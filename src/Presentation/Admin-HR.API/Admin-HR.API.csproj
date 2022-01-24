@@ -18,6 +18,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Application\HR-Admin.Application\HR-Admin.Application.csproj" />
       <ProjectReference Include="..\..\Infrastructure\Admin-HR.Infrastructure.Persistence\Admin-HR.Infrastructure.Persistence.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Admin-HR.Infrastructure\Admin-HR.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

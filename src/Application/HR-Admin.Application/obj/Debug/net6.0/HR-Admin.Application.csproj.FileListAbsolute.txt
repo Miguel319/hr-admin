@@ -15,3 +15,5 @@ D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\n
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.dll
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\ref\HR-Admin.Application.dll
 D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\obj\Debug\net6.0\HR-Admin.Application.pdb
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\Admin-HR.Infrastructure.dll
+D:\Cool Code\Dotnet\HR\Admin-HR\src\Application\HR-Admin.Application\bin\Debug\net6.0\Admin-HR.Infrastructure.pdb
