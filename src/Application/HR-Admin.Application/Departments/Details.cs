@@ -22,10 +22,12 @@ namespace HR_Admin.Application.Departments
             public Handler(DataContext context)
                 => _context = context;
 
-            public async Task<Result<Department>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<Result<Department>?> Handle(Query request, CancellationToken cancellationToken)
             {
-              var department = await _context.Departments.FindAsync(request.Id);
+              var department = await _context.Departments.FindAsync(new object?[] { request.Id }, cancellationToken);
 
+              if (department == null) return null;
+              
               return Result<Department>.Success(department);
             } 
         } 

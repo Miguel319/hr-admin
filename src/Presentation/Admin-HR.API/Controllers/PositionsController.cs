@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Admin_HR.Domain.Entities;
 using HR_Admin.Application.Positions;
@@ -11,5 +12,11 @@ namespace Admin_HR.API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Position>>> GetPositions()
             => HandleResult(await Mediator.Send(new List.Query()));
+
+
+        [HttpGet("{id:guid}")]
+        public async Task<ActionResult<List<Position>>> GetPositionById(Guid id)
+            => HandleResult(await Mediator.Send(new Details.Query() {Id = id}));
+        
     }
 }
