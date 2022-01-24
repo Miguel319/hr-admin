@@ -17,5 +17,9 @@ namespace Admin_HR.API.Controllers
         public async Task<ActionResult<Department>> GetEmployee(Guid id)
             => HandleResult(await Mediator.Send(new Details.Query {Id = id}));
 
+        [HttpPost]
+        public async Task<ActionResult> CreateEmployee(Employee employee)
+            => HandleResult(await Mediator.Send(new Create.Command {Employee = employee}));
+
     }
 }
